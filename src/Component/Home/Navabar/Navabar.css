@@ -1,0 +1,19 @@
+.Logo{
+    color: rgb(62, 31, 31) !important;
+    font-size: 30px;
+    font-weight: 800;
+    
+}
+.nav-item{
+    margin-right: 10px;
+    
+}
+.navbar-nav{
+    margin-left: 10px;
+}
+.nav-link {
+    color: rgba(0, 0, 0, 0.9) !important;
+    font-size: 22px;
+    font-weight: 500;
+    
+}

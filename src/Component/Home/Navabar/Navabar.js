@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Navabar.css'
 
@@ -7,22 +8,31 @@ import './Navabar.css'
 const Navabar = () => {
     return (
     
-       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <div className="container-fluid">
-    <Link to='' className="navbar-brand" href="#">TalhaCart</Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      <Navbar bg="light" expand="lg">
+      <Container className='mx-auto' fluid>
+        <Navbar.Brand className='Logo' href="#">TalhaCart</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '150px' }}
+            navbarScroll
+          >
+        
+          
+       
+       
+     <div className="mainMenu">
+     <ul className="navbar-nav me-auto mb-2 mb-lg-0 " >
+       
         <li className="nav-item">
-          <Link to='' className="nav-link active" aria-current="page" >Home</Link>
+          <Link to='' className="nav-link active link" aria-current="page">Home</Link>
         </li>
         <li className="nav-item">
-          <Link to='' className="nav-link active" aria-current="page">Blog</Link>
+          <Link to='' className="nav-link active" aria-current="page" >Blog</Link>
         </li>
-        <li className="nav-item">
-          <Link to='' className="nav-link active" aria-current="page" >Home</Link>
+        <li className="nav-item ">
+        <Link to='' className="nav-link active" aria-current="page">Manage Products</Link>
         </li>
         <li className="nav-item">
           <Link to='' className="nav-link active" aria-current="page" >My profile</Link>
@@ -31,8 +41,12 @@ const Navabar = () => {
         
         
       </ul>
-      <div className="d-flex">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+     </div>
+    </Nav>
+          <Nav  className="me-0 "
+            style={{ maxHeight: '150px' }}
+            navbarScroll>
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
           <Link to='' className="nav-link active" aria-current="page" >Log In</Link>
         </li>
@@ -41,10 +55,11 @@ const Navabar = () => {
         </li>
        
        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
+          </Nav>
+          
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
    
     );
 };
