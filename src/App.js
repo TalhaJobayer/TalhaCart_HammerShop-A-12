@@ -7,7 +7,7 @@ import Navabar from './Component/Home/Navabar/Navabar';
 function App() {
   return (
    
-       <div >
+       <div className='App' >
          <Navabar></Navabar>
      <Home></Home>
       
