@@ -48,10 +48,10 @@ const Navabar = () => {
             navbarScroll>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link to='' className="nav-link active" aria-current="page" >Log In</Link>
+          <Link to='/logIn' className="nav-link active" aria-current="page" >Log In</Link>
         </li>
         <li className="nav-item">
-          <Link to='' className="nav-link active" aria-current="page">Sign Up</Link>
+          <Link to='/signUp' className="nav-link active" aria-current="page">Sign Up</Link>
         </li>
        
        </ul>

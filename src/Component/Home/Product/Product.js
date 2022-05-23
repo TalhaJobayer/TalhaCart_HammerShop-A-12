@@ -13,7 +13,7 @@ const Product = ({product}) => {
   <figure><img src={image} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{name}</h2>
-    <h4 className="card-title"><b>Price:</b>${price}</h4>
+    <h4 className="card-title " style={{marginTop:'-10px 0 -10px 10px'}}><b>Price:</b>${price}</h4>
  
     <p><b>Description:</b>{description.slice(0,75)}<b>....</b></p>
     <div className="card-actions justify-end">
