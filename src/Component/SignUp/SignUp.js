@@ -12,17 +12,17 @@ const SignUp = () => {
          console.log(data);
     }
     return (
-        <div className='flex h-screen justify-center items-center'>
-            <div className="card p-5  bg-base-100 shadow-xl">
+        <div className='flex mt-3 mb-3 justify-center items-center'>
+            <div style={{padding:'10px 80px 10px 80px'}} className="card   bg-base-100 shadow-xl">
   <div className="card-body">
-    <h2 className="card-title flex  text-3xl justify-center">Register Here</h2>
-    <div class="flex flex-col  border-opacity-50">
-    <div class=" place-items-center">
+    <h2 className="card-title flex   text-3xl justify-center">Register</h2>
+    <div className="flex flex-col  border-opacity-50">
+    <div className=" place-items-center">
   <form onSubmit={handleSubmit(onSubmit)}>
   <input
    type="text"
     placeholder="Write Your Name"
-     class="input input-bordered  flex  justify-center mt-2 input-info "
+     className="input input-bordered  flex  justify-center mt-2 input-info "
      {...register("displayName", { required: true })}
       />
       <label className='label'>
@@ -32,7 +32,7 @@ const SignUp = () => {
   <input
    type="email"
     placeholder="Write Your Email"
-     class="input input-bordered  flex  justify-center mt-2 input-info "
+     className="input input-bordered  flex  justify-center mt-2 input-info "
      {...register("email", { required:{
        value: true,
        message:'email is requierd'
@@ -43,7 +43,7 @@ const SignUp = () => {
       </label>
        <input type="password"
    placeholder="Write Your password" 
-   class="input input-bordered  flex  justify-center mt-2 input-info "
+   className="input input-bordered  flex  justify-center mt-2 input-info "
    {...register("password", { required: {
        value:true,
        message:'password is required'
@@ -66,9 +66,9 @@ const SignUp = () => {
   <span>Already Have an account ?</span>
   <span > <b className='ml-8'><Link to="/logIn">Please Log In</Link></b> </span>
  
-  <div class="divider">OR</div>
-  <div class="   place-items-center">
-  <button onClick={()=>signInWithGoogle()} class="btn btn-outline">Login with google</button>
+  <div className="divider">OR</div>
+  <div className="   place-items-center">
+  <button onClick={()=>signInWithGoogle()} className="btn btn-outline">Login with google</button>
   </div>
 </div>
   </div>
