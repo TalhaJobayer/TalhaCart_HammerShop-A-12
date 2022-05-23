@@ -12,7 +12,7 @@ import SignUp from './Component/SignUp/SignUp';
 function App() {
   return (
    
-       <div className='App' >
+       <div  >
          <Navabar></Navabar>
          <Routes>
            <Route path='/' element={<Home></Home>}></Route>
