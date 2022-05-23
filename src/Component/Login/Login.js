@@ -12,8 +12,8 @@ const Login = () => {
     <h2 className="card-title flex  text-3xl justify-center">Login</h2>
     <div class="flex flex-col  border-opacity-50">
   <div class=" place-items-center">
-  <input type="text" placeholder="Type here" class="input  flex  justify-center input-bordered input-info " />
-  <input type="text" placeholder="Type here" class="input input-bordered  flex  justify-center mt-2 input-info " />
+  <input type="email" placeholder="Write Your email" class="input input-bordered  flex  justify-center mt-2 input-info " />
+  <input type="password" placeholder="Write Your password" class="input input-bordered  flex  justify-center mt-2 input-info " />
 
 
   </div>
