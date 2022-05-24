@@ -1,21 +1,42 @@
 import React from 'react';
 
 const AddProduct = () => {
+   
 
 
     const handleAddProduct=(event)=>{
         event.preventDefault()
-        const name=event.target.name.value
+        const name=event.target.Name.value
         const image=event.target.Image.value
         const description=event.target.Description.value
         const price=event.target.Price.value
         const quantity=event.target.Quantity.value
+        const NewProduct={name,image,description,price,quantity}
+        console.log(NewProduct);
 
-       const NewProduct={ name,image,description,price,quantity}
-       console.log(NewProduct);
-       event.target.reset()
+        fetch(`http://localhost:5000/products`,{
+            method:'POST',
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(NewProduct) 
+    
+        })
+        .then(res=>res.json())
+       .then(data=>{
+        alert('added succesfully')
+        event.target.reset()
+      console.log('Success:', data);
+      
+    })
 
     }
+
+      
+       
+      
+
+    
        
     return (
         <div className=' flex justify-center m-3 '>
