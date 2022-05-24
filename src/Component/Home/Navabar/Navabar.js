@@ -61,6 +61,9 @@ const Navabar = () => {
           <Link to='/logIn' className="nav-link active" aria-current="page" >Log In</Link>
         </li>
        
+       {
+         user? <h1 className='text-black-500 font-bold mt-3'>{user.displayName}</h1> :''
+       }
         {
           user?  <li className="nav-item">
           <button onClick={ logout}  className="nav-link active" aria-current="page">Log Out</button>

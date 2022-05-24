@@ -15,6 +15,8 @@ import AddProduct from './Component/AddProduct/AddProduct';
 import PurchaseInfo from './Component/Productdetails/PurchaseInfo/PurchaseInfo';
 import MyOrder from './Component/Dashboard/MyOrder/MyOrder';
 import ManageUser from './Component/Dashboard/ManageUser/ManageUser';
+import MyProfile from './Component/Dashboard/MyProfile/MyProfile';
+import AddReview from './Component/Dashboard/AddReview/AddReview';
 
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
            }>
              <Route index  element={<MyOrder></MyOrder>}></Route>
              <Route  path='manageUser' element={<ManageUser></ManageUser>}></Route>
+             <Route  path='MyProfile' element={<MyProfile></MyProfile>}></Route>
+             <Route  path='AddReview' element={<AddReview></AddReview>}></Route>
            </Route>
            <Route path='/hammer/:id' element={
              <RequireAuth>
