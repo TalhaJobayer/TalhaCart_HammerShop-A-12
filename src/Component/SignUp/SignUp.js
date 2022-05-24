@@ -1,15 +1,41 @@
 import React from 'react';
-import {useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import {useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
+import Loading from '../Loading/Loading';
+import { async } from '@firebase/util';
 const SignUp = () => {
     const navigate=useNavigate()
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [
+      createUserWithEmailAndPassword,
+      user,
+      loading,
+      error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+    const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
     
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const onSubmit=(data)=>{
+
+    let signError;
+   
+    if (error||gError||UpdateError) {
+      signError= <p className='text-red-500'>{error?.message||gError.message||UpdateError.message}</p>
+       
+    }
+    if (loading||gLoading) {
+      return <Loading></Loading>;
+    }
+    if (user||gUser) {
+     console.log(user||gUser);
+    
+    }
+    const onSubmit= async(data)=>{
          console.log(data);
+        await createUserWithEmailAndPassword(data.email,data.password)
+        await  updateProfile({displayName:data.name})
+       
     }
     return (
         <div className='flex mt-3 mb-3 justify-center items-center'>
@@ -23,10 +49,10 @@ const SignUp = () => {
    type="text"
     placeholder="Write Your Name"
      className="input input-bordered  flex  justify-center mt-2 input-info "
-     {...register("displayName", { required: true })}
+     {...register("name", { required: true })}
       />
       <label className='label'>
-      {errors.displayName?.type === 'required' && "Name is required"}
+      {errors.name?.type === 'required' && "Name is required"}
       </label>
       
   <input
@@ -61,7 +87,7 @@ const SignUp = () => {
       </label>
     <button style={{marginLeft:"20px",width:'80%'}} type='submit' className="btn btn-outline flex  justify-center mt-2 ">Register</button>
   </form>
-
+{signError}
   </div>
   <span>Already Have an account ?</span>
   <span > <b className='ml-8'><Link to="/logIn">Please Log In</Link></b> </span>

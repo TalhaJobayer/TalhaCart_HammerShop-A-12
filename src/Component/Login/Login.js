@@ -1,14 +1,37 @@
 import React from 'react';
-import {useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import {useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import Loading from '../Loading/Loading'
 
 const Login = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const navigate=useNavigate()
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const onSubmit=(data)=>{
-console.log(data);
+    const [
+      signInWithEmailAndPassword,
+      user,
+      loading,
+      error,
+    ] = useSignInWithEmailAndPassword(auth);
+    let signError;
+   
+    if (error||gError) {
+      signError= <p className='text-red-500'>{error?.message||gError.message}</p>
+       
+    }
+    if (loading||gLoading) {
+      return <Loading></Loading>;
+    }
+    if (user||gUser) {
+     console.log(user||gUser);
+    
+    }
+   
+    const onSubmit= async(data)=>{
+     console.log(data);
+   await signInWithEmailAndPassword(data.email,data.password)
     }
     
     return (
@@ -54,6 +77,7 @@ console.log(data);
     
     <button style={{marginLeft:"20px",width:'80%'}} type='submit' className="btn btn-outline flex  justify-center mt-2 ">Login</button>
   </form>
+  {signError}
 
   </div>
   <span>Didn't Have an account ?</span>
