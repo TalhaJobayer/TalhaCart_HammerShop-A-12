@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useParams } from 'react-router-dom';
 import UseProductDetails from '../../UseHooks/UseProductDetails';
 
@@ -6,7 +7,10 @@ const Productdetails = () => {
         const {id}=useParams()
       const  [product,setproduct]=UseProductDetails(id)
     return (
-        <div className='d-flex justify-content-center '>
+
+        <div>
+         
+          <div className='d-flex justify-content-center '>
            <div className='col-lg-4  mt-3  ' >
             <div className="card bg-base-100 shadow-xl ">
   <figure><img src={product.image} alt="Shoes" /></figure>
@@ -22,9 +26,7 @@ const Productdetails = () => {
   </div>
 </div>
         </div>
-           
-
-            
+      </div>
         </div>
     );
 };

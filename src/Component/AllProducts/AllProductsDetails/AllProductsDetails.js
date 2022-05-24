@@ -5,7 +5,7 @@ const AllProductsDetails = ({singleProduct}) => {
 
 
     return (
-        <div className='col-lg-4  mt-3 ' >
+        <div className='col-lg-4  mt-3  ' >
         <div className="card bg-base-100 shadow-xl">
 <figure><img src={singleProduct.image} alt="Shoes" /></figure>
 <div className="card-body">
@@ -16,7 +16,7 @@ const AllProductsDetails = ({singleProduct}) => {
 <p><b>Description:</b>{singleProduct.description.slice(0,60)}<b>....</b></p>
 <from className="card-actions justify-center">
    
-    <input name='quantity' type="number" placeholder="add Quantity" class="input input-bordered input-success  max-w-xs" />
+    <input name='quantity' type="number" placeholder="add Quantity" className="input input-bordered input-success  max-w-xs" />
   <button  className="btn btn-primary">Update Quantity</button>
 </from>
 </div>
