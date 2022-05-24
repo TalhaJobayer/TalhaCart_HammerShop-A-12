@@ -12,6 +12,7 @@ import SignUp from './Component/SignUp/SignUp';
 import Footer from './Component/Footer/Footer'
 import AllProducts from './Component/AllProducts/AllProducts';
 import AddProduct from './Component/AddProduct/AddProduct';
+import PurchaseInfo from './Component/Productdetails/PurchaseInfo/PurchaseInfo';
 
 
 function App() {
@@ -29,6 +30,11 @@ function App() {
            <Route path='/hammer/:id' element={
              <RequireAuth>
                <Productdetails></Productdetails>
+             </RequireAuth>
+           }></Route>
+           <Route path='/purchaseInfo' element={
+             <RequireAuth>
+               <PurchaseInfo></PurchaseInfo>
              </RequireAuth>
            }></Route>
            <Route path='/MyProducts' element={<AllProducts></AllProducts>}></Route>

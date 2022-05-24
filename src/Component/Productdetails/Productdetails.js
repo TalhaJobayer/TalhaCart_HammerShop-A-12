@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import UseProductDetails from '../../UseHooks/UseProductDetails';
 
 const Productdetails = () => {
         const {id}=useParams()
       const  [product,setproduct]=UseProductDetails(id)
+
     return (
 
         <div>
@@ -21,7 +22,7 @@ const Productdetails = () => {
  
     <p><b>Description:</b>{product.description}</p>
     <div className="card-actions justify-end">
-    <button  className="btn btn-primary">Purchase Now</button>
+   <Link to={'/purchaseinfo'}> <button  className="btn btn-primary">Purchase Now</button></Link>
     </div>
   </div>
 </div>

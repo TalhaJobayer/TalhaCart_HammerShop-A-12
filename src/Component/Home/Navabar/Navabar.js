@@ -33,7 +33,7 @@ const Navabar = () => {
      <ul className="navbar-nav me-auto mb-2 mb-lg-0 " >
        
         <li className="nav-item">
-          <Link to='/' className="nav-link active link" aria-current="page">Home</Link>
+          <Link to='/' className="nav-link active " aria-current="page">Home</Link>
         </li>
         <li className="nav-item">
           <Link to='' className="nav-link active" aria-current="page" >Blog</Link>
