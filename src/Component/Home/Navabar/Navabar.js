@@ -39,9 +39,11 @@ const Navabar = () => {
         <li className="nav-item">
           <Link to='' className="nav-link active" aria-current="page" >Blog</Link>
         </li>
-        <li className="nav-item ">
-        <Link to='/Dashboard' className="nav-link active" aria-current="page">Dashboard</Link>
-        </li>
+        {
+          user && <li className="nav-item ">
+          <Link to='/Dashboard' className="nav-link active" aria-current="page">Dashboard</Link>
+          </li>
+        }
         <li className="nav-item">
           <Link to='/MyProducts' className="nav-link active" aria-current="page" >My Products</Link>
         </li>
