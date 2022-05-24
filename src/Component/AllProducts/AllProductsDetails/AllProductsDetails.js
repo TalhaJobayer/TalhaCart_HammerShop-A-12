@@ -5,7 +5,8 @@ const AllProductsDetails = ({singleProduct}) => {
 
 
     return (
-        <div className='col-lg-4  mt-3  ' >
+       
+            <div className='col-lg-4  mt-3  ' >
         <div className="card bg-base-100 shadow-xl">
 <figure><img src={singleProduct.image} alt="Shoes" /></figure>
 <div className="card-body">
@@ -13,7 +14,7 @@ const AllProductsDetails = ({singleProduct}) => {
 <h4 className="card-title " ><b>Price:</b>${singleProduct.price}</h4>
 <h4 className="card-title "><b>Quantity:</b>${singleProduct.quantity}</h4>
 
-<p><b>Description:</b>{singleProduct.description.slice(0,60)}<b>....</b></p>
+<p><b>Description:</b>{singleProduct.description?.slice(0,60)}<b>....</b></p>
 <from className="card-actions justify-center">
    
     <input name='quantity' type="number" placeholder="add Quantity" className="input input-bordered input-success  max-w-xs" />
@@ -22,6 +23,7 @@ const AllProductsDetails = ({singleProduct}) => {
 </div>
 </div>
     </div>
+      
     );
 };
 

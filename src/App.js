@@ -12,7 +12,7 @@ import SignUp from './Component/SignUp/SignUp';
 import Footer from './Component/Footer/Footer'
 import AllProducts from './Component/AllProducts/AllProducts';
 import AddProduct from './Component/AddProduct/AddProduct';
-import PurchaseInfo from './Component/Productdetails/PurchaseInfo/PurchaseInfo';
+
 import MyOrder from './Component/Dashboard/MyOrder/MyOrder';
 import ManageUser from './Component/Dashboard/ManageUser/ManageUser';
 import MyProfile from './Component/Dashboard/MyProfile/MyProfile';
@@ -35,18 +35,15 @@ function App() {
              <Route  path='manageUser' element={<ManageUser></ManageUser>}></Route>
              <Route  path='MyProfile' element={<MyProfile></MyProfile>}></Route>
              <Route  path='AddReview' element={<AddReview></AddReview>}></Route>
+             <Route  path='AllProduct' element={<AllProducts></AllProducts>}></Route>
            </Route>
            <Route path='/hammer/:id' element={
              <RequireAuth>
                <Productdetails></Productdetails>
              </RequireAuth>
            }></Route>
-           <Route path='/purchaseInfo' element={
-             <RequireAuth>
-               <PurchaseInfo></PurchaseInfo>
-             </RequireAuth>
-           }></Route>
-           <Route path='/MyProducts' element={<AllProducts></AllProducts>}></Route>
+           
+          
            <Route path='/addProduct' element={<AddProduct></AddProduct>}></Route>
            <Route path='/logIn' element={<Login></Login>}></Route>
            <Route path='/signUp' element={<SignUp></SignUp>}></Route>

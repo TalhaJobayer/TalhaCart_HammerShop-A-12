@@ -10,7 +10,7 @@ const Product = ({product}) => {
     return (
         <div className='col-lg-4  mt-3 ' >
             <div className="card bg-base-100 shadow-xl">
-  <figure><img src={image} alt="Shoes" /></figure>
+  <figure><img src={image} alt="" /></figure>
   <div className="card-body">
     <h2 className="card-title">{name}</h2>
     <h4 className="card-title " style={{marginTop:'-10px 0 -10px 10px'}}><b>Price:</b>${price}</h4>
