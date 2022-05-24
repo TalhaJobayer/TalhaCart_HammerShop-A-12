@@ -16,7 +16,7 @@ const Product = ({product}) => {
     <h4 className="card-title " style={{marginTop:'-10px 0 -10px 10px'}}><b>Price:</b>${price}</h4>
  
     <p><b>Description:</b>{description.slice(0,75)}<b>....</b></p>
-    <div className="card-actions justify-end">
+    <div className="card-actions justify-center">
       <button onClick={()=>handledetails(_id)} className="btn btn-primary">Buy Now</button>
     </div>
   </div>

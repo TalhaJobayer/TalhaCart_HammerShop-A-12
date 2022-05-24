@@ -10,6 +10,7 @@ import Productdetails from './Component/Productdetails/Productdetails';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
 import SignUp from './Component/SignUp/SignUp';
 import Footer from './Component/Footer/Footer'
+import AllProducts from './Component/AllProducts/AllProducts';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                <Productdetails></Productdetails>
              </RequireAuth>
            }></Route>
+           <Route path='/MyProducts' element={<AllProducts></AllProducts>}></Route>
            <Route path='/logIn' element={<Login></Login>}></Route>
            <Route path='/signUp' element={<SignUp></SignUp>}></Route>
            <Route path='*' element={<NotFound></NotFound>}></Route>
