@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuLogo from '../../../Images/kisspng-electricity-computer-icons-symbol-company-electric-electric-5abdc00c68c5a8.0630823215223849084292.jpg'
+import MenuLogo from '../../Image/stock-vector-hammer-logo-hammer-vector-construction-logo-home-service-logo-vector-1582845514.jpg'
 
 const Footer = () => {
     return (
@@ -14,11 +14,11 @@ const Footer = () => {
         
         <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           
-          <h6 className="text-uppercase fw-bold mb-4">
-          <img className='logo' src={MenuLogo} alt="" /> Electro House
+          <h6 className="text-2xl fw-bold mb-4">
+          <img className='logo'style={{height:'60px'}} src={MenuLogo} alt="" /> TalhaCart
           </h6>
           <p>
-            Here you can buy any kind of Gadgets
+            Here you can buy any kind of Hammer Tools
           </p>
         </div>
         
@@ -29,10 +29,10 @@ const Footer = () => {
           <h6 className="text-uppercase fw-bold mb-4">
             Products
           </h6>
-          <p>Headphones</p>
-          <p>  Powerbank</p>
-          <p>  Tablet</p>
-          <p>Laptop</p>
+          <p>Pein Hammer</p>
+          <p>  Shell Hammer</p>
+          <p> Bulk Hammer</p>
+          <p>Hammer Head</p>
         </div>
         
 
