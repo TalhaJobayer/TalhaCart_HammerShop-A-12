@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
 import { useForm } from "react-hook-form";
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading'
+import UseGetToken from '../../UseHooks/UseGetToken';
 
 const Login = () => {
   const navigate=useNavigate()
@@ -11,13 +12,21 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+   
+
     const [
       signInWithEmailAndPassword,
       user,
       loading,
       error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [Token]=UseGetToken(user||gUser)
     let signError;
+     useEffect( () =>{
+      if (Token) {
+          navigate(from, { replace: true });
+      }
+  }, [Token, from, navigate])
    
     if (error||gError) {
       signError= <p className='text-red-500'>{error?.message||gError.message}</p>
@@ -26,11 +35,7 @@ const Login = () => {
     if (loading||gLoading) {
       return <Loading></Loading>;
     }
-    if (user||gUser) {
-     console.log(user||gUser);
-     navigate(from, { replace: true });
     
-    }
    
     const onSubmit= async(data)=>{
      console.log(data);
