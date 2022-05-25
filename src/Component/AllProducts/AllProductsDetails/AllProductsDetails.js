@@ -1,7 +1,7 @@
 import React from 'react';
 
-const AllProductsDetails = ({singleProduct}) => {
-   
+const AllProductsDetails = ({singleProduct,handleDelete}) => {
+  
 
 
     return (
@@ -18,7 +18,10 @@ const AllProductsDetails = ({singleProduct}) => {
 <from className="card-actions justify-center">
    
     <input name='quantity' type="number" placeholder="add Quantity" className="input input-bordered input-success  max-w-xs" />
-  <button  className="btn btn-primary">Update Quantity</button>
+  <div className='flex'>
+  <button  className="btn btn-primary " style={{marginRight:'5px'}}>Update Quantity</button>
+  <button onClick={()=>handleDelete(singleProduct._id)} className="btn btn-primary">Delete</button>
+  </div>
 </from>
 </div>
 </div>

@@ -5,6 +5,22 @@ import AllProductsDetails from './AllProductsDetails/AllProductsDetails';
 
 const AllProducts = () => {
     const [product,setproduct]=UseProduct([])
+    const handleDelete=(id)=>{
+        const procced=window.confirm('Are you sure?')
+       if(procced){
+        fetch(`http://localhost:5000/products/${id}`,{
+            method:"DELETE",
+           
+        })
+        .then(res=>res.json())
+        .then(data=>{
+
+            const remaining=product.filter(product._id!== id)
+            setproduct(remaining)
+            console.log(data)
+        })
+       }
+   }
     return (
         <div>
              <div className='flex justify-center mt-2'>
@@ -15,6 +31,7 @@ const AllProducts = () => {
     {
         product.map(singleProduct=><AllProductsDetails
         key={singleProduct._id}
+        handleDelete={handleDelete}
         singleProduct={singleProduct}
         ></AllProductsDetails>)
     }
