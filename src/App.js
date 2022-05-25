@@ -19,6 +19,7 @@ import MyProfile from './Component/Dashboard/MyProfile/MyProfile';
 import AddReview from './Component/Dashboard/AddReview/AddReview';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import RequireAdmin from './Component/RequireAdmin/RequireAdmin';
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
              </RequireAuth>
            }>
              <Route index  element={<MyOrder></MyOrder>}></Route>
-             <Route  path='manageUser' element={<ManageUser></ManageUser>}></Route>
+             <Route  path='manageUser' element={<RequireAdmin><ManageUser></ManageUser></RequireAdmin>}></Route>
              <Route  path='MyProfile' element={<MyProfile></MyProfile>}></Route>
              <Route  path='AddReview' element={<AddReview></AddReview>}></Route>
              <Route  path='AllProduct' element={<AllProducts></AllProducts>}></Route>
@@ -46,7 +47,7 @@ function App() {
            }></Route>
            
           
-           <Route path='/addProduct' element={<AddProduct></AddProduct>}></Route>
+           <Route path='/addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
            <Route path='/logIn' element={<Login></Login>}></Route>
            <Route path='/signUp' element={<SignUp></SignUp>}></Route>
            <Route path='*' element={<NotFound></NotFound>}></Route>
