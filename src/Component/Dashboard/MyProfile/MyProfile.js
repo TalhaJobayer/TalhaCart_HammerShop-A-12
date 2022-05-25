@@ -5,14 +5,14 @@ import auth from '../../../firebase.init';
 const MyProfile = () => {
     const [user]=useAuthState(auth)
     return (
-        <div>
-            <div class="card = bg-base-100 shadow-xl">
+        <div className='flex justify-center mt-5 '>
+
+
+            <div class="card  p-5 bg-base-100 shadow-xl">
   <div class="card-body">
-    <h2 class="card-title">{user.name}</h2>
-    <h3>If a dog chews shoes whose shoes does he choose?</h3>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
-    </div>
+    <h2 class="card-title"><b>User Name:</b> {user.displayName}</h2>
+    <h3><b>User Email: </b>{user.email}</h3>
+    
   </div>
 </div>
         </div>
