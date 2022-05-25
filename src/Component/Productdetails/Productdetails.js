@@ -10,6 +10,7 @@ const Productdetails = () => {
         const {id}=useParams()
       const  [product,setproduct]=UseProductDetails(id)
       // =============for form==============
+     
       const [user, loading, error] = useAuthState(auth);
       const handlePurchaseInfo=(event)=>{
         event.preventDefault()
@@ -19,6 +20,8 @@ const Productdetails = () => {
         const address=event.target.address.value
         const price=event.target.price.value
         const quantity=event.target.quantity.value
+       
+        
         const phoneNumber=event.target.phoneNumber.value
         const orderedProducts={name,email,productName,address,price,quantity,phoneNumber}
         console.log(orderedProducts);
@@ -82,7 +85,8 @@ const Productdetails = () => {
   
  
    <h2 className='text-xl'>Quantity:</h2>
-   <input  name='quantity' type="number"  placeholder="Minimum quantity 10 piece" className="input input-bordered input-warning w-full max-w-xl" required/>
+   <input  name='quantity'  type="number"  placeholder="Minimum quantity 10 piece" className="input input-bordered input-warning w-full max-w-xl" required/>
+   
    <h2 className='text-xl'>Address:</h2>
    <input  name='address' type="text"  placeholder="Full Address" className="input input-bordered input-warning w-full max-w-xl" required/>
    <h2 className='text-xl'>Phone Number:</h2>

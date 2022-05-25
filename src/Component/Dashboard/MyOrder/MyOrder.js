@@ -53,8 +53,8 @@ const MyOrder = () => {
     return (
         <div>
            
-            <div class="overflow-x-auto">
-  <table class="table w-full">
+            <div className="overflow-x-auto">
+  <table className="table w-full">
     {/* <!-- head --> */}
     <thead>
       <tr>
@@ -72,12 +72,12 @@ const MyOrder = () => {
       {
           Order.map((singleOrder,index)=> <tr key={singleOrder._id} >
             <th>{index + 1}</th>
-            <td>{singleOrder.email}</td>
+            <td>{singleOrder.name}</td>
             <td>{singleOrder.productName}</td>
             <td>{singleOrder.address}</td>
-            <td>{singleOrder.price}</td>
+            <td>${singleOrder.price}</td>
             <td>{singleOrder.quantity}</td>
-            <td><button onClick={()=>handleDelete(singleOrder._id)} class="btn btn-outline">Delete</button></td>
+            <td><button onClick={()=>handleDelete(singleOrder._id)} className="btn btn-outline">Delete</button></td>
           </tr>)
       }
      

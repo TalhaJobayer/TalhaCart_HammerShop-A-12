@@ -1,40 +1,70 @@
 import React from 'react';
+import { useQuery } from 'react-query';
+import { toast } from 'react-toastify';
+import Loading from '../../Loading/Loading';
 
 const ManageUser = () => {
+
+  const {data:users,isLoading,refetch}=useQuery('users',()=>fetch('http://localhost:5000/user',{
+    method:"GET",
+    headers:{
+      authorization:`bearer ${localStorage.getItem('accessToken')}`
+    }
+
+  }).then(res=>res.json()))
+      
+  const handleAdmin=(email)=>{
+    
+    console.log(email);
+        fetch(`http://localhost:5000/user/admin/${email}`,{
+          method:"PUT",
+          headers:{
+            authorization:`bearer ${localStorage.getItem('accessToken')}`
+          }
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          refetch()
+          toast('admin added succesfully')
+          console.log(data)
+        })
+  }
+  
+  const handleDelete=()=>{
+
+  }
+  if(isLoading){
+    return <Loading></Loading>
+  }
     return (
-        <div class="overflow-x-auto">
-  <table class="table w-full">
+        <div className="overflow-x-auto">
+  <table className="table w-full">
     {/* <!-- head --> */}
+    
     <thead>
       <tr>
         <th></th>
         <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
+        <th>email</th>
+        <th>Admin</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
-      {/* <!-- row 1 --> */}
-      <tr>
-        <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
-      </tr>
-      {/* <!-- row 2 --> */}
-      <tr class="active">
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        <td>Purple</td>
-      </tr>
-      {/* <!-- row 3 --> */}
-      <tr>
-        <th>3</th>
-        <td>Brice Swyre</td>
-        <td>Tax Accountant</td>
-        <td>Red</td>
-      </tr>
+      {
+        users.map((user,index)=><tr
+        key={user._id}>
+          <th>{index+1}</th>
+          <td>{user.name}</td>
+          <td>{user.email}</td>
+          <td>{user.role !=='admin'&&<button onClick={()=>handleAdmin(user.email)} className="btn btn-outline">Admin</button>}</td>
+          <td><button onClick={()=>handleDelete(users._id)} className="btn btn-outline">delete</button></td>
+        </tr>)
+      }
+      
+     
+     
+      
     </tbody>
   </table>
 </div>
