@@ -17,6 +17,22 @@ const MyOrder = () => {
                    })
            }
     },[user])
+    const handleDelete=(id)=>{
+        const procced=window.confirm('Are you sure?')
+           if(procced){
+            fetch(`http://localhost:5000/orderProductss/${id}`,{
+                method:"DELETE",
+ 
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                console.log('success',data)
+                const remaining=Order.filter(singelproduct=>singelproduct._id !==id)
+                console.log(remaining);
+                setOrder(remaining)
+            })
+           }
+    }
     if(loading){
         return <Loading></Loading>
     }
@@ -33,6 +49,8 @@ const MyOrder = () => {
         <th>Product Name</th>
         <th>Address</th>
         <th>Price</th>
+        <th>Quantity</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -44,6 +62,8 @@ const MyOrder = () => {
             <td>{singleOrder.productName}</td>
             <td>{singleOrder.address}</td>
             <td>{singleOrder.price}</td>
+            <td>{singleOrder.quantity}</td>
+            <td><button onClick={()=>handleDelete(singleOrder._id)} class="btn btn-outline">Delete</button></td>
           </tr>)
       }
      
