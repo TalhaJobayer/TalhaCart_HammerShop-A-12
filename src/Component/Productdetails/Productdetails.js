@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 import { Link, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import UseProductDetails from '../../UseHooks/UseProductDetails';
 
@@ -32,7 +33,9 @@ const Productdetails = () => {
         })
         .then(res=>res.json())
        .then(data=>{
-        alert('added succesfully')
+        toast('added succesfully')
+        // alert('added succesfully')
+       
         event.target.reset()
       console.log('Success:', data);
       

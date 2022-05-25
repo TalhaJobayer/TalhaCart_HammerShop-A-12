@@ -55,9 +55,11 @@ const Navabar = () => {
             style={{ maxHeight: '150px' }}
             navbarScroll>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
+        {
+          user? "":  <li className="nav-item">
           <Link to='/logIn' className="nav-link active" aria-current="page" >Log In</Link>
         </li>
+        }
        
        {
          user? <h1 className='text-black-500 font-bold mt-3'>{user.displayName}</h1> :''

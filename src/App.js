@@ -17,6 +17,8 @@ import MyOrder from './Component/Dashboard/MyOrder/MyOrder';
 import ManageUser from './Component/Dashboard/ManageUser/ManageUser';
 import MyProfile from './Component/Dashboard/MyProfile/MyProfile';
 import AddReview from './Component/Dashboard/AddReview/AddReview';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -50,6 +52,7 @@ function App() {
            <Route path='*' element={<NotFound></NotFound>}></Route>
 
          </Routes>
+         <ToastContainer />
          <Footer></Footer>
          
           
