@@ -8,7 +8,7 @@ const Product = ({product}) => {
       navigate(`/hammer/${_id}`)
     }
     return (
-        <div className='col-lg-4  mt-3 ' >
+        <div className='col-lg-4 col-md-6  mt-3 ' >
             <div className="card bg-base-100 shadow-xl">
   <figure><img src={image} alt="" /></figure>
   <div className="card-body">
