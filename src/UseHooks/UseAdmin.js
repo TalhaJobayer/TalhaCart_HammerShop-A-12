@@ -7,7 +7,7 @@ const UseAdmin=(user)=>{
         const email=user?.email
         console.log(email);
         if(email){
-            fetch(`http://localhost:5000/admin/${email}`, {
+            fetch(`https://guarded-lake-94958.herokuapp.com/admin/${email}`, {
                 method:'GET',
                 headers: {
                     'content-type': 'application/json',

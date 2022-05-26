@@ -12,7 +12,7 @@ const MyOrder = () => {
     const [user,loading]=useAuthState(auth)
     useEffect(()=>{
            if(user){
-                   fetch(`http://localhost:5000/orderProductss?email=${user.email}`,{
+                   fetch(`https://guarded-lake-94958.herokuapp.com/orderProductss?email=${user.email}`,{
                       method:"GET",
                       headers:{
                         "authorization":`beaerer ${localStorage.getItem('accessToken')}`
@@ -34,7 +34,7 @@ const MyOrder = () => {
     const handleDelete=(id)=>{
         const procced=window.confirm('Are you sure?')
            if(procced){
-            fetch(`http://localhost:5000/orderProductss/${id}`,{
+            fetch(`https://guarded-lake-94958.herokuapp.com/orderProductss/${id}`,{
                 method:"DELETE",
  
             })

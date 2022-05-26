@@ -1,0 +1,66 @@
+[debug] [2022-05-26T12:48:45.775Z] ----------------------------------------------------------------------
+[debug] [2022-05-26T12:48:45.804Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\My Pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-26T12:48:45.805Z] CLI Version:   10.9.0
+[debug] [2022-05-26T12:48:45.812Z] Platform:      win32
+[debug] [2022-05-26T12:48:45.812Z] Node Version:  v16.13.2
+[debug] [2022-05-26T12:48:45.909Z] Time:          Thu May 26 2022 18:48:45 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-26T12:48:45.910Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-26T12:48:45.928Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-05-26T12:48:46.027Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-26T12:48:46.028Z] > authorizing via signed-in user (talhajobayer8@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  H:\programming hero\full stack\assighnment-12
+
+[debug] [2022-05-26T12:48:48.922Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-05-26T12:48:48.923Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-05-26T12:51:08.222Z] ----------------------------------------------------------------------
+[debug] [2022-05-26T12:51:08.225Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\My Pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-26T12:51:08.226Z] CLI Version:   10.9.0
+[debug] [2022-05-26T12:51:08.226Z] Platform:      win32
+[debug] [2022-05-26T12:51:08.226Z] Node Version:  v16.13.2
+[debug] [2022-05-26T12:51:08.228Z] Time:          Thu May 26 2022 18:51:08 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-26T12:51:08.228Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-26T12:51:08.242Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-26T12:51:08.243Z] > authorizing via signed-in user (talhajobayer8@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  H:\programming hero\full stack\assighnment-12
+
+[debug] [2022-05-26T12:59:23.508Z] ----------------------------------------------------------------------
+[debug] [2022-05-26T12:59:23.511Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\My Pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-26T12:59:23.512Z] CLI Version:   10.9.0
+[debug] [2022-05-26T12:59:23.512Z] Platform:      win32
+[debug] [2022-05-26T12:59:23.512Z] Node Version:  v16.13.2
+[debug] [2022-05-26T12:59:23.514Z] Time:          Thu May 26 2022 18:59:23 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-26T12:59:23.514Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-26T12:59:23.525Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-26T12:59:23.526Z] > authorizing via signed-in user (talhajobayer8@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  H:\programming hero\full stack\assighnment-12
+

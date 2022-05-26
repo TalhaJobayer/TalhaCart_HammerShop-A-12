@@ -5,7 +5,7 @@ import Loading from '../../Loading/Loading';
 
 const ManageUser = () => {
 
-  const {data:users,isLoading,refetch}=useQuery('users',()=>fetch('http://localhost:5000/user',{
+  const {data:users,isLoading,refetch}=useQuery('users',()=>fetch('https://guarded-lake-94958.herokuapp.com/user',{
     method:"GET",
     headers:{
       authorization:`bearer ${localStorage.getItem('accessToken')}`
@@ -16,7 +16,7 @@ const ManageUser = () => {
   const handleAdmin=(email)=>{
     
     console.log(email);
-        fetch(`http://localhost:5000/user/admin/${email}`,{
+        fetch(`https://guarded-lake-94958.herokuapp.com/user/admin/${email}`,{
           method:"PUT",
           headers:{
             authorization:`bearer ${localStorage.getItem('accessToken')}`

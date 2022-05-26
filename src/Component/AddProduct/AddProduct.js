@@ -14,7 +14,7 @@ const AddProduct = () => {
         const NewProduct={name,image,description,price,quantity}
         console.log(NewProduct);
 
-        fetch(`http://localhost:5000/products`,{
+        fetch(`https://guarded-lake-94958.herokuapp.com/products`,{
             method:'POST',
             headers:{
                 "Content-Type":"application/json"

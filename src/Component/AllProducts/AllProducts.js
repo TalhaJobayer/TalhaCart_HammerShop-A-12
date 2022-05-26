@@ -8,7 +8,7 @@ const AllProducts = () => {
     const handleDelete=(id)=>{
         const procced=window.confirm('Are you sure?')
        if(procced){
-        fetch(`http://localhost:5000/products/${id}`,{
+        fetch(`https://guarded-lake-94958.herokuapp.com/products/${id}`,{
             method:"DELETE",
            
         })
