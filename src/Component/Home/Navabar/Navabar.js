@@ -40,7 +40,7 @@ const Navabar = () => {
           <Link to='/' className="nav-link active " aria-current="page">Home</Link>
         </li>
         <li className="nav-item">
-          <Link to='' className="nav-link active" aria-current="page" >Blog</Link>
+          <Link to='/blog' className="nav-link active" aria-current="page" >Blog</Link>
         </li>
         <li className="nav-item">
           <Link to='/portfolio' className="nav-link active" aria-current="page" >Protfolio</Link>

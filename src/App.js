@@ -21,6 +21,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RequireAdmin from './Component/RequireAdmin/RequireAdmin';
 import Portfolio from './Component/Portfolio/Portfolio';
+import Blog from './Component/Blog/Blog';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
          <Routes>
            <Route path='/' element={<Home></Home>}></Route>
            <Route path='portfolio' element={<Portfolio></Portfolio>}></Route>
+           <Route path='blog' element={<Blog></Blog>}></Route>
            <Route path='/Dashboard' element={
              <RequireAuth>
                <Dashboard></Dashboard>
