@@ -2,7 +2,10 @@ import React from 'react';
 
 const Summury = () => {
     return (
+        
         <div className='mt-5 mb-5 sm:w-50'>
+            <div className='divider'></div>
+            <div >
             <h1 className=' text-4xl md:text-4xl  lg:text-6xl text-sky-500 flex justify-center '>Trusted By Buyers From All Over 80 Countrys</h1>
             <div className='   lg:flex lg:justify-between' style={{marginLeft:'40px',marginRight:'40px'}}>
                 <div className='mt-5'>
@@ -21,6 +24,8 @@ const Summury = () => {
 
             </div>
 
+        </div>
+        <div className='divider mt-3'></div>
         </div>
     );
 };
