@@ -2,16 +2,19 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './Navabar.css'
 
 
 
 const Navabar = () => {
+ const navigate=useNavigate()
   const [user, loading, error] = useAuthState(auth);
   const logout = () => {
     signOut(auth);
+    navigate('/')
+    
     localStorage.removeItem('accessToken')
   };
     return (
@@ -38,6 +41,9 @@ const Navabar = () => {
         </li>
         <li className="nav-item">
           <Link to='' className="nav-link active" aria-current="page" >Blog</Link>
+        </li>
+        <li className="nav-item">
+          <Link to='/portfolio' className="nav-link active" aria-current="page" >Protfolio</Link>
         </li>
         {
           user && <li className="nav-item ">

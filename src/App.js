@@ -20,6 +20,7 @@ import AddReview from './Component/Dashboard/AddReview/AddReview';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RequireAdmin from './Component/RequireAdmin/RequireAdmin';
+import Portfolio from './Component/Portfolio/Portfolio';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
          <Navabar></Navabar>
          <Routes>
            <Route path='/' element={<Home></Home>}></Route>
+           <Route path='portfolio' element={<Portfolio></Portfolio>}></Route>
            <Route path='/Dashboard' element={
              <RequireAuth>
                <Dashboard></Dashboard>
