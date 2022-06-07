@@ -1,10 +1,17 @@
 # PROJECT NAME:
 
-## TAlhaCart
+## TalhaCart
   ### GIT REPOSITORY CLIENT-SIDE:
-   https://github.com/programming-hero-web-course1/manufacturer-website-client-side-TalhaJobayer
+     https://github.com/TalhaJobayer/TalhaCart_HammerShop-A-12
   ### GIT REPOSITORY SERVER-SIDE:
-  https://github.com/programming-hero-web-course1/manufacturer-website-server-side-TalhaJobayer
+     https://github.com/TalhaJobayer/TalhaCart_HammerShop-A-12-ServerSide    
+
+ ## Features:
+   *  This Website is for a company that manufactures and sells hammer tools.
+   * A user can place an order, and the user has a Dashboard where he can cancel his order.
+   * Users need to log in before getting service.
+   * Admin has also a Dashboard. Admin can make a user Admin,  delete the user, and Manage the products.
+
 
   ### PROJECT DEPENDENCIES ARE:
  * bootstrap -5 
