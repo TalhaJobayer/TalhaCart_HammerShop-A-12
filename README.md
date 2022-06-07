@@ -5,7 +5,8 @@
      https://github.com/TalhaJobayer/TalhaCart_HammerShop-A-12
   ### GIT REPOSITORY SERVER-SIDE:
      https://github.com/TalhaJobayer/TalhaCart_HammerShop-A-12-ServerSide    
-
+  ###  LIVE-SIDE:
+       https://talhacart-d2e37.web.app/
  ## Features:
    *  This Website is for a company that manufactures and sells hammer tools.
    * A user can place an order, and the user has a Dashboard where he can cancel his order.
