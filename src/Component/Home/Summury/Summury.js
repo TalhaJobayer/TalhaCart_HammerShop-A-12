@@ -6,7 +6,7 @@ const Summury = () => {
         <div className='m-3  sm:w-50' style={{backgroundColor:"black",borderRadius:"80px 5px"}}>
            
             <div >
-            <h1 className=' text-4xl md:text-4xl  lg:text-6xl text-sky-500 flex justify-center text-center '>Trusted By Buyers From All Over 80 Countrys</h1>
+            <h1 className='pt-5 text-4xl md:text-4xl   lg:text-6xl text-sky-500 flex justify-center text-center '>Trusted By Buyers From All Over 80 Countrys</h1>
             <div className='   lg:flex lg:justify-between' style={{marginLeft:'40px',marginRight:'40px'}}>
                 <div className='mt-5'>
                     <h1 className=' text-5xl md:text-6xl lg:text-7xl text-blue-400 font-bold text-center'>100%</h1>
