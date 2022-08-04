@@ -4,6 +4,7 @@ import './App.css';
 import Dashboard from './Component/Dashboard/Dashboard';
 import Home from './Component/Home';
 import Navabar from './Component/Home/Navabar/Navabar';
+import ShowAllProduct from './Component/Home/ShowAllProduct/ShowAllProduct';
 import Login from './Component/Login/Login';
 import NotFound from './Component/NotFound/NotFound';
 import Productdetails from './Component/Productdetails/Productdetails';
@@ -33,6 +34,8 @@ function App() {
            <Route path='/' element={<Home></Home>}></Route>
            <Route path='portfolio' element={<Portfolio></Portfolio>}></Route>
            <Route path='blog' element={<Blog></Blog>}></Route>
+           <Route path='ShowAll' element={<ShowAllProduct></ShowAllProduct>}></Route>
+
            <Route path='/Dashboard' element={
              <RequireAuth>
                <Dashboard></Dashboard>

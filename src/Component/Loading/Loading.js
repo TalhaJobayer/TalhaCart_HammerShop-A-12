@@ -1,11 +1,11 @@
 import React from 'react';
+import './Loading.css'
 
 const Loading = () => {
     return (
-        <div>
-            <div className="spinner-border text-primary" role="status">
-        <span className="visually-hidden">Loading...</span>
-         </div>
+        <div  className='flex justify-center'>
+            
+         <div class="lds-hourglass "></div>
         </div>
     );
 };

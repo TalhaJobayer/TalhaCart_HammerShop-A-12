@@ -13,7 +13,7 @@ const TopRatedProducts = () => {
              <h1 className=' text-4xl md:text-4xl mt-3  lg:text-6xl text-sky-500 flex justify-center '>Top Most Searched Products</h1>
             <div className='row' >
             {
-                Products.slice(2,6).map(product=><Product
+                Products.slice(2,5).map(product=><Product
                 key={product._id}
                 product={product}
                 ></Product>)

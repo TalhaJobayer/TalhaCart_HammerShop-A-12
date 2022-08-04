@@ -19,7 +19,7 @@ const Navabar = () => {
   };
     return (
     
-      <Navbar bg="light" expand="lg">
+      <Navbar  bg="light" expand="lg">
       <Container className='mx-auto' fluid>
         <Navbar.Brand className='Logo' href="#">TalhaCart</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
