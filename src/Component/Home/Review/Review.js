@@ -18,30 +18,22 @@ const Review = () => {
      return (
         <div className='mt-5 mb-5'  >
             <div className='mt-3 ' >
-            <h1 className=' text-4xl md:text-4xl  lg:text-6xl text-sky-500 flex justify-center '>Testimonials</h1>
+            <h1 className=' text-3xl md:text-3xl  lg:text-6xl text-sky-500 flex justify-center ' style={{fontWeight: "800"}}>Also Available On</h1>
             </div>
             <div className='divider mb-5'></div>
        
         <Slider {...settings}>
           <div>
-            <h3 className='text-2xl '>Very Good Quality Product.   </h3>
-            <h3>Jhon Abraham</h3>
-            <h3>CEO- ALPHA Compnay</h3>
+          <img class="logo-bar__image lazyloaded" data-src="//cdn.shopify.com/s/files/1/0337/7102/8616/files/Paytm-Mall_85e3ba26-a9ef-4cd2-8a80-7731be5879ca_300x.jpg?v=1609934678" alt="Paytm true wireless earbuds and bluetooth wireless earbuds" src="//cdn.shopify.com/s/files/1/0337/7102/8616/files/Paytm-Mall_85e3ba26-a9ef-4cd2-8a80-7731be5879ca_300x.jpg?v=1609934678"/>
           </div>
           <div>
-          <h3 className='text-2xl '>Good Quality Product.   </h3>
-            <h3>Abraham Linkon</h3>
-            <h3>CEO- AwsomeCart Compnay</h3>
+          <img class="logo-bar__image lazyloaded" data-src="//cdn.shopify.com/s/files/1/0337/7102/8616/files/Reliance-digital_300x.png?v=1634819117" alt="Hammer X Reliance Digital" src="//cdn.shopify.com/s/files/1/0337/7102/8616/files/Reliance-digital_300x.png?v=1634819117"/>
           </div>
           <div>
-          <h3 className='text-2xl '>Good Quality Product.I'm Impresed   </h3>
-            <h3>Ching Marma </h3>
-            <h3>CEO- Wohang Compnay</h3>
+          <img class="logo-bar__image lazyloaded" data-src="//cdn.shopify.com/s/files/1/0337/7102/8616/files/Amazon_300x.jpg?v=1609934554" alt="amazon true wireless earbuds" src="//cdn.shopify.com/s/files/1/0337/7102/8616/files/Amazon_300x.jpg?v=1609934554"/>
           </div>
           <div>
-          <h3 className='text-2xl '> Product Quality Well Maintained.   </h3>
-            <h3>Jhon wick</h3>
-            <h3>CEO- Hammer Compnay</h3>
+          <img class="logo-bar__image lazyloaded" data-src="//cdn.shopify.com/s/files/1/0337/7102/8616/files/Myntra_300x.jpg?v=1609934603" alt="myntra wireless headphones" src="//cdn.shopify.com/s/files/1/0337/7102/8616/files/Myntra_300x.jpg?v=1609934603"/>
           </div>
           
         </Slider>

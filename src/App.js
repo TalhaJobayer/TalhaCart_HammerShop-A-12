@@ -17,8 +17,7 @@ import AddProduct from './Component/AddProduct/AddProduct';
 import MyOrder from './Component/Dashboard/MyOrder/MyOrder';
 import ManageUser from './Component/Dashboard/ManageUser/ManageUser';
 import MyProfile from './Component/Dashboard/MyProfile/MyProfile';
-import AddReview from './Component/Dashboard/AddReview/AddReview';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RequireAdmin from './Component/RequireAdmin/RequireAdmin';
 import Portfolio from './Component/Portfolio/Portfolio';
@@ -44,7 +43,7 @@ function App() {
              <Route index  element={<MyOrder></MyOrder>}></Route>
              <Route  path='manageUser' element={<RequireAdmin><ManageUser></ManageUser></RequireAdmin>}></Route>
              <Route  path='MyProfile' element={<MyProfile></MyProfile>}></Route>
-             <Route  path='AddReview' element={<AddReview></AddReview>}></Route>
+             
              <Route  path='AllProduct' element={<AllProducts></AllProducts>}></Route>
            </Route>
            <Route path='/hammer/:id' element={

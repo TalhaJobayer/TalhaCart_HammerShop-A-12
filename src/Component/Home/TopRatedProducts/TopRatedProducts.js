@@ -10,7 +10,7 @@ const TopRatedProducts = () => {
 
     return (
         <div>
-             <h1 className=' text-4xl md:text-4xl mt-3  lg:text-6xl text-sky-500 flex justify-center '>Top Most Searched Products</h1>
+             <h1 className=' m-2 text-3xl md:text-4xl mt-3  lg:text-6xl text-sky-500 flex justify-center ' style={{fontWeight: "800"}}>Best Selling Products</h1>
             <div className='row' >
             {
                 Products.slice(2,5).map(product=><Product
