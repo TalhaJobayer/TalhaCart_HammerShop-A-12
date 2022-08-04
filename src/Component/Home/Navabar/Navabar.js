@@ -17,6 +17,9 @@ const Navabar = () => {
     
     localStorage.removeItem('accessToken')
   };
+  const openPortfolio = url => {
+    window.open(url);
+  };
     return (
     
       <Navbar  bg="light" expand="lg">
@@ -43,7 +46,8 @@ const Navabar = () => {
           <Link to='/blog' className="nav-link active" aria-current="page" >Blog</Link>
         </li>
         <li className="nav-item">
-          <Link to='/portfolio' className="nav-link active" aria-current="page" >Protfolio</Link>
+        
+          <button onClick={() => openPortfolio('https://neon-fairy-ed7154.netlify.app/')}  className="nav-link active" aria-current="page">Protfolio</button>
         </li>
         {
           user && <li className="nav-item ">
