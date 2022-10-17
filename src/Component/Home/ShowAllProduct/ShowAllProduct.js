@@ -23,7 +23,7 @@ const AllProducts = () => {
 
     return (
         <div>
-            <h1 className=' m-3 text-4xl md:text-4xl  lg:text-6xl text-sky-500 flex justify-center '>All Hammers Are Here</h1>
+            <h1 className=' m-3 text-xl md:text-2xl  lg:text-4xl text-sky-500 flex justify-center '>All Hammers Are Here</h1>
             {
                 loading ? <Loading></Loading> : <div className='row  m-3' >
                 {

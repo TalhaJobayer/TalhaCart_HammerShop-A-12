@@ -1,0 +1,7 @@
+.ContactUs{
+    background: url(../../../Image/ContactUs.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}

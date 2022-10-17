@@ -18,7 +18,7 @@ const Review = () => {
      return (
         <div className='mt-5 mb-5'  >
             <div className='mt-3 ' >
-            <h1 className=' text-3xl md:text-3xl  lg:text-6xl text-sky-500 flex justify-center ' style={{fontWeight: "800"}}>Also Available On</h1>
+            <h1 className=' text-xl md:text-2xl  lg:text-4xl text-sky-500 flex justify-center ' style={{fontWeight: "800"}}>Also Available On</h1>
             </div>
             <div className='divider mb-5'></div>
        

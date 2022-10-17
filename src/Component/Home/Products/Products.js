@@ -22,7 +22,7 @@ const Products = () => {
 
     return (
         <div>
-            <h1 className='mt-5 text-3xl md:text-4xl  lg:text-6xl text-sky-500 flex justify-center  ' style={{fontWeight: "800"}}>Hammers Are Here</h1>
+            <h1 className='mt-5 text-xl md:text-2xl  lg:text-4xl text-sky-500 flex justify-center  ' style={{fontWeight: "800"}}>Hammers Are Here</h1>
             {
                 loading ? <Loading></Loading> : <div className='row  m-3' >
                 {

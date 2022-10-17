@@ -1,0 +1,8 @@
+.Width{
+    max-width: 35rem ;
+}
+@media only screen and (max-width: 800px) {
+    .Width{
+        max-width: 20rem ;
+    }
+}
